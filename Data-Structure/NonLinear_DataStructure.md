@@ -10,7 +10,7 @@
     - 각각의 노드가 최대 두 개의 자식 노드를 가지는 트리(그림을 뒤집었을 때 트리모양) 자료구조
 - 트리(Tree) 개념 상세
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/90077061/216817120-6fcbc56b-1756-43a8-8765-6d26f6b5549e.png)
     
     - 검정색 동그라미 : 노드(node), 여기에 데이터가 담김.
     - 노드와 노드 사이를 이어주는 선을 엣지(edge)라고 함.
@@ -29,18 +29,17 @@
     - 정 이진트리(Full Binary Tree)
         - 모든 레벨에서 노드들이 꽉 채워진(잎새노드를 제외한 모든 노드가 2개의 자식노드를 가짐) 트리
         
-        ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%201.png)
+        ![Untitled 1](https://user-images.githubusercontent.com/90077061/216817131-7a1b5452-38f2-46b9-9136-d0ab2cc47ca1.png)
         
         - 레벨(k)에 따른 노드의 숫자 : $2^k$
     - 완전 이진트리(Complete Binary Tree)
         - 마지막 레벨을 제외한 모든 레벨이서 노드들이 꽉 채워진 이진트리
         
-        ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%202.png)
+        ![Untitled 2](https://user-images.githubusercontent.com/90077061/216817140-0525c485-004d-4a20-ab78-e8773cbf9876.png)
         
-    
     정이진트리와 완전이진트리는 다음처럼 1차원 배열(array)로도 표현이 가능
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%203.png)
+    ![Untitled 3](https://user-images.githubusercontent.com/90077061/216817144-8a767e99-3e82-419a-97ec-7ec7174cd874.png)
     
     ```python
     left_index = index * 2 + 1
@@ -50,7 +49,7 @@
 - 트리 순회
     - 트리의 각 노드를 체계적인 방법으로 방문하는 과정
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/90077061/216817167-07bb6990-9aa3-4d82-b7c4-caab1755a2bc.png)
     
     - 전위 순회(preorder)
         - 1, 2, 4, 5, 3
@@ -70,8 +69,8 @@
     - 힙 트리에서는 중복값 허용(이진 탐색 트리에서는 중복값 허용X
 - 힙의 종류
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%205.png)
-    
+    ![Untitled 5](https://user-images.githubusercontent.com/90077061/216817179-f1ee37bb-2653-4272-8e0f-500d916d65ea.png)
+
     - 최대 힙(Max Heap)
         - 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진 트리
     - 최소 힙(Min Heap)
@@ -110,13 +109,12 @@
     
 - 저장 과정
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%206.png)
+    ![Untitled 6](https://user-images.githubusercontent.com/90077061/216817184-dc810d77-1d03-46eb-8df9-aec7f777b7b2.png)
     
 - 삭제 과정(heapify)
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%207.png)
+    ![Untitled 7](https://user-images.githubusercontent.com/90077061/216817198-575a16ef-b7cd-491f-8c6d-d448e0f42671.png)
     
-
 # Priority Queue
 
 - 개념 요약
@@ -173,7 +171,7 @@
 - 예제
     - [8, 3, 26, 1, 7, 2, 4, 10] 이라는 숫자들 중 3-5인덱스의 합을 구하려는 상황
         
-        ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%208.png)
+        ![Untitled 8](https://user-images.githubusercontent.com/90077061/216817210-5fe57469-a928-4af1-9ed5-4da57205203d.png)
         
     - 필요한 구간 노드까지만 탐색해서 최종합을 반환
 - 코드 구현
@@ -196,7 +194,7 @@
     
     - 트리 초기화
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%209.png)
+    ![Untitled 9](https://user-images.githubusercontent.com/90077061/216817220-e751bc0d-633f-462c-ab21-e8d90dc3dfeb.png)
     
     `보통 리스트의 인덱스는 0번부터 시작하는데, 세그먼트 트리는 1번부터 시작하는지 의문이 생길 수 있다. 세그먼트 트리의 인덱스가 1번부터 시작하는 이유는 재귀적으로 편하게 세그먼트 트리를 생성하기 위해서이다. 1부터 시작하게 되면 2를 곱했을 때는 왼쪽 자식 노드를 가리키고, 2를 곱하고 1을 더하면 오른쪽 자식 노드를 가리키게 되어 효과적임`
     
@@ -222,7 +220,7 @@
     
     - 트리 구간 합 구하기
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%2010.png)
+    ![Untitled 10](https://user-images.githubusercontent.com/90077061/216817240-f6471dc5-83b7-42be-be48-7f82cf803b3c.png)
     
     `6-9 범위의 구간합을 구한다고 가정 시 그림처럼 3개의 빨간색 노드의 합만 구해주면 된다.`
     
@@ -248,7 +246,7 @@
     
     - 원소 값 수정
     
-    ![Untitled](%E1%84%87%E1%85%B5%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20ef30870e6416459fbe4124a5737c262b/Untitled%2011.png)
+    ![Untitled 11](https://user-images.githubusercontent.com/90077061/216817251-410979a7-2676-4835-a576-b2579c3c23ab.png)
     
     `특정 원소의 값을 수정할 때는 **해당 원소를 포함하고 있는 모든 구간 합 노드들을 갱신**
     해주면 됨. 즉, 세그먼트 트리의 모든 노드를 변경하는 것이 아닌 해당 원소를 포함하고 있는 부분적인 노드들만 바꿔주면 되는 것`
