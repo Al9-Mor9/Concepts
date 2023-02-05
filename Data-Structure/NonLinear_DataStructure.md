@@ -1,9 +1,3 @@
-# 비선형 자료구조
-
-생성일: 2023년 1월 30일 오전 8:04
-작성자: 황재천_서울3반
-태그: Binary Tree, Heap, Indexed Tree, Priority Queue, Segment Tree
-
 # Binary Tree
 
 - 개념 요약
