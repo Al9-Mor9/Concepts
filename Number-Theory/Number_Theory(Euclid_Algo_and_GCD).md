@@ -1,12 +1,3 @@
-# 정수론
-
-생성일: 2023년 1월 29일 오후 10:08
-작성자: 박영서
-태그: Euclidean algorithm, Extended Euclidean algorithm, Greatest Common Divisor
-
-r_{-1} = &a \times 1 + b\times0\\
-r_0 = &a \times 0 + b\times 1\\
-
 # 정수론 (Number Theory) : (⭐을 붙인 부분만 읽으셔도 됩니다)
 
 ☝️ 서울대학교 권오남 교수님의 [[정수론](https://etl.snu.ac.kr/courses/62f4ab47c7f3cf10ee2ac615)] 강의를 편집한 내용입니다. (링크 클릭 후 가입 시 수강 가능함)
@@ -21,19 +12,13 @@ r_0 = &a \times 0 + b\times 1\\
     
     a, b가 정수일 때, a가 b를 나눈다는 것은 a * k = b가 되는 정수 k가 존재한다는 것이다
     
-    $$
-    a|b \leftrightarrow \exist k, s.t.\, b = a \times k
-    $$
+    $$ a|b \leftrightarrow \exists k, s.t.\, b = a \times k$$
     
 - Congruence (합동)
     
     a, b가 정수이고 n이 0보다 큰 정수일 때, a가 법 n에 대해 b와 합동이라는 것은 n이 a-b를 나눈다는 것이다.
     
-    $$
-    a \equiv b (mod\,n) \leftrightarrow n | (a-b)
-    $$
-    
-
+    $$ a \equiv b (mod\,n) \leftrightarrow n | (a-b) $$
 ---
 
 ### (1-2) 정리
@@ -41,13 +26,11 @@ r_0 = &a \times 0 + b\times 1\\
 아래에서 a, b, c는 모두 정수이고 n은 양의 정수.
 
 - Theorem 1.1 ⭐
-    
     $$
-    \begin{align*}& (i)\;a|b이고\,a|c이면,\,a|(b+c)이다
-    \\&
-    (ii)\;a|b이고\,a|c이면,\,a|(b-c)이다.\,즉\,b\equiv c(mod\,a)이다.
+    \begin{align*}
+    & (i)\;a|b이고\,a|c이면,\,a|(b+c)이다\\
+    &(ii)\;a|b이고\,a|c이면,\,a|(b-c)이다.\,즉\,b\equiv c(mod\,a)이다.
     \end{align*}
-    
     $$
     
     - 증명
@@ -95,7 +78,7 @@ r_0 = &a \times 0 + b\times 1\\
         \\&따라서\,a \equiv b(mod\,n)이면\, b\equiv a(mod\,n).
         \\(iii)
         \\&a\equiv b(mod\,n)이므로\,n|(a-b)이고,\,따라서\,(a-b)=nk_1이\\&되는\,정수\,k가\,존재.
-        \\&b\equiv c(mod\,n)이므로\,n|(b-c)\leftrightarrow \exist k_2 \in \Z, s.t.,(b-c)=nk_2.
+        \\&b\equiv c(mod\,n)이므로\,n|(b-c)\leftrightarrow \exists k_2 \in \Z, s.t.,(b-c)=nk_2.
         \\&(a-b)+(b-c)=(a-c)=(nk_1+nk_2)
         \\&(a-c)=n(k_1+k_2), (k_1+k_2) \in\Z이므로\,n|(a-c)\leftrightarrow a \equiv c(mod\,n)\square
         \end{align*}
@@ -123,8 +106,8 @@ r_0 = &a \times 0 + b\times 1\\
         \\&(a+c)-(b+d)=n(k_1+k_2)
         \\&n|((a+c)-(b+d)) \leftrightarrow(a+c) \equiv (b+d)(mod\,n)\square
         \\&(-도\,마찬가지로\,증명\,가능)
-        \\(ii)\\&\exist k_1,k_2\in \Z s.t.,\,a-b=nk_1, c-d=nk_2.
-        \\&a=nk_1+b, c=nk_2+d
+        \\(ii)\\&\exists k_1,k_2\in \Z s.t.,\,a-b=nk_1, c-d=nk_2.
+        \\&a=nk_1+b, cs=nk_2+d
         \\&ac=(nk_1+b)(nk_2+d) = (nk_1nk_2+nk_1d+nk_2b+bd)
         \\&=n(nk_1nk_2+k_1d+k2_b)+bd
         \\&ac-bd=n(nk_1nk_2+k_1d+k2_b)
@@ -161,7 +144,7 @@ r_0 = &a \times 0 + b\times 1\\
         $$
         \begin{align*}
         (\rightarrow)
-        \\&a \equiv b(mod\,n) \iff \exist k \in \Z, s.t.(a-b) = nk
+        \\&a \equiv b(mod\,n) \iff \exists k \in \Z, s.t.(a-b) = nk
         \\&b = a - nk = (nq_1+r_1) - nk = n(q_1 - k) + r_1 = nq_2+ r_2.
         \\ &\therefore r_1 = r_2
         \\(\leftarrow)
@@ -296,7 +279,7 @@ Theorem2.2에 따라 정수 a, b의 최대공약수 (a,b)를 구하는 알고리
     
     $$
     a, b가\,정수라고\,하자.
-    \\a,b가\,서로소이다. \iff \exist x,y \in \Z, s.t.,ax+by = 1
+    \\a,b가\,서로소이다. \iff \exists x,y \in \Z, s.t.,ax+by = 1
     $$
     
     - 증명
@@ -411,7 +394,7 @@ $$
 
 $$
 \begin{align*}
-r_{i+1} =s_{i+1}a + t_{i+1}b =&r_{n-1}-q_{n+1}r_n \\=&s_{i-1}a+t_{i-1}b-q_{n+1}(s_ia+t_ib)\\=&(s_{i-1}-q_{n+1}s_i)a+(t_{i-1}-q_{n+1}t_i)b
+r_{i+1} =s_{i+1}a + t_{i+1}b =&r_{n-1}-q_{n+1}r_n \\ =&s_{i-1}a+t_{i-1}b-q_{n+1}(s_ia+t_ib)\\=&(s_{i-1}-q_{n+1}s_i)a+(t_{i-1}-q_{n+1}t_i)b
 \end{align*}
 \\\therefore s_{i+1}=s_{i-1}-q_{n+1}s_i,t_{i+1}=t_{i-1}-q_{n+1}t_i
 $$
