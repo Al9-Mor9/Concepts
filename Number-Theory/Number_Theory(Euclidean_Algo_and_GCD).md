@@ -41,7 +41,8 @@ $$
 $$
 
     
-    - 증명
+- 증명   
+
 $$
 \displaylines{
 (i)\ a|b이므로\ 어떤\ 정수k_1에\ 대해\ b=ak_1이다.\\
@@ -50,6 +51,7 @@ b+c=(ak_1+ak_2)=a(k_1+k_2)이고\ (k_1+k_2)\ 또한\ 정수이므로,\ a | (b+c)
 (ii)는\ (i)\ 과\ 마찬가지로\ 증명할\ 수\ 있다
 }
 $$        
+
 - Theorem 1.2. ⭐
 
 $$
@@ -59,38 +61,43 @@ $$
 }
 $$
     
-    증명은 생략
+- 증명은 생략
     
 - Theorem 1.3.
     
     n이 0보다 큰 정수라고 하면 다음이 성립한다.
     
-    ```math
-    \begin{align*}
-    &(i)\,a\equiv a(mod\,n)
-    \\&(ii)\,a\equiv b(mod\,n)이면,\,b \equiv a(mod\,n)
-    \\&(iii)\,a\equiv b(mod\,n)이고\,b \equiv c(mod\,n)이면\,a\equiv c(mod\,n)
-    \end{align*}
-    ```
-    
-    - 증명
+
+$$
+\displaylines{
+(i)\ a \equiv a(\bmod n)\\
+(ii) a \equiv b(\bmod n)이면,\ b \equiv a(\bmod n)\\
+(iii) a \equiv b(\bmod n)이고\ b \equiv c(\bmod n)이면,\ a \equiv c(\bmod n)
+}
+$$
+
+
+- 증명
         
-        $$
-        \begin{align*}
-        (i)
-        \\&a\equiv a(mod\,n)\leftrightarrow\,n|(a-a) =n|0.
-        \\&모든\,정수\,n이\,0을\,나누므로\,이는\,성립함 \square
-        \\(ii)
-        \\&a\equiv b(mod\,n)\leftrightarrow\,n|(a-b)이므로\\&(a-b)=nk가\,되는\,어떤\,정수\,k가\,존재.
-        \\&양변에\,-1을\,곱하면\,(b-a)=-nk=(-k)n이\,되고,\\&-k\,또한\,정수이므로\,n|(b-a) \leftrightarrow\,b \equiv a(mod\,n)
-        \\&따라서\,a \equiv b(mod\,n)이면\, b\equiv a(mod\,n).
-        \\(iii)
-        \\&a\equiv b(mod\,n)이므로\,n|(a-b)이고,\,따라서\,(a-b)=nk_1이\\&되는\,정수\,k가\,존재.
-        \\&b\equiv c(mod\,n)이므로\,n|(b-c)\leftrightarrow \exist k_2 \in \Z, s.t.,(b-c)=nk_2.
-        \\&(a-b)+(b-c)=(a-c)=(nk_1+nk_2)
-        \\&(a-c)=n(k_1+k_2), (k_1+k_2) \in\Z이므로\,n|(a-c)\leftrightarrow a \equiv c(mod\,n)\square
-        \end{align*}
-        $$
+$$
+\displaylines{
+(i) a \equiv a(\bmod n)\leftrightarrow\ n|(a-a),\ n|0.\\
+모든\ 정수\ n이\ 0을\ 나누므로\ 이는\ 성립함 \square\\
+ii)
+a\equiv b(\bmod n) \leftrightarrow\ n|(a-b)이므로\\
+(a-b)=nk가\ 되는\ 어떤\ 정수\ k가\ 존재.\\
+양변에\ -1을\ 곱하면\ (b-a)=-nk=(-k)n이\ 되고,\\
+-k\ 또한\ 정수이므로\ n|(b-a) \leftrightarrow\ b \equiv a(\bmod n)\\
+따라서\,a \equiv b(\bmod n)이면\, b\equiv a(\bmod n).\\
+(iii)
+a\equiv b(\bmod n)이므로\ n|(a-b)이고,\ 따라서\ (a-b)=nk_1이\\
+되는\ 정수\ k가\ 존재.\\
+b\equiv c(\bmod n)이므로\,n|(b-c)\leftrightarrow \exists k_2 \in \Z, s.t. (b-c)=nk_2.\\
+(a-b)+(b-c)=(a-c)=(nk_1+nk_2)\\
+(a-c)=n(k_1+k_2), (k_1+k_2) \in \Z이므로\\
+n|(a-c)\leftrightarrow a \equiv c(\bmod n)\square
+}
+$$
         
     
 - Theorem 1.4.
