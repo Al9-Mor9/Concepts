@@ -83,7 +83,7 @@ $$
 \displaylines{
 (i) a \equiv a(\bmod n)\leftrightarrow\ n|(a-a),\ n|0.\\
 모든\ 정수\ n이\ 0을\ 나누므로\ 이는\ 성립함 \square\\
-(ii)
+ii)
 a\equiv b(\bmod n) \leftrightarrow\ n|(a-b)이므로\\
 (a-b)=nk가\ 되는\ 어떤\ 정수\ k가\ 존재.\\
 양변에\ -1을\ 곱하면\ (b-a)=-nk=(-k)n이\ 되고,\\
@@ -102,35 +102,38 @@ $$
     
 - Theorem 1.4.
     
-    $$
-    \begin{align*}
-    &(i)\,a\equiv b(mod\,n)이고\,c\equiv(mod\,n)이면\,(a \pm c)\equiv d(b\pm d)(mod\,n)이다.
-    \\&(ii)\,a \equiv b(mod\,n),\,c\equiv d(mod\,n)이면\, ac\equiv bd(mod\,n)이다.
-    \\&(iii)k>0\in \Z에 대해, a\equiv b(mod\,n)이면\,a^k\equiv b^k(mod\,n)이다.\end{align*}
-    $$
+$$
+\begin{aligned}
+\displaylines{
+(i) a \equiv b(\bmod n)이고\ c \equiv (\bmod n)이면\ (a \pm c) \equiv d(b \pm d)(\bmod n)이다.\\
+(ii) a \equiv b(\bmod n), c \equiv d(\bmod n)이면\, ac \equiv bd(\bmod n)이다.\\
+(iii) k>0 \in \Z에 대해, a \equiv b(\bmod n)이면,\ a^k \equiv b^k(\bmod n)이다.
+}
+\end{aligned}
+$$
     
-    - 증명
-        ```math
-        \begin{align*}
-        (i, +증명)
-        &a\equiv b(mod\,n) \leftrightarrow n|(a-b).
-        \,(a-b)=nk_1이\,되는\,k_1 \in \Z가\, 존재
-        \\&c \equiv d(mod\,n) \leftrightarrow n|(c-d).\,(c-d)=nk_2가\,되는\,k_2\in \Z가\, 존재
-        \\&(a-b)+(c-d)=nk_1+nk_2=n(k_1+k_2)
-        \\&(a+c)-(b+d)=n(k_1+k_2)
-        \\&n|((a+c)-(b+d)) \leftrightarrow(a+c) \equiv (b+d)(mod\,n)\square
-        \\&(-도\,마찬가지로\,증명\,가능)
-        \\(ii)\\&\exist k_1,k_2\in \Z s.t.,\,a-b=nk_1, c-d=nk_2.
-        \\&a=nk_1+b, c=nk_2+d
-        \\&ac=(nk_1+b)(nk_2+d) = (nk_1nk_2+nk_1d+nk_2b+bd)
-        \\&=n(nk_1nk_2+k_1d+k2_b)+bd
-        \\&ac-bd=n(nk_1nk_2+k_1d+k2_b)
-        \\&n|(ac-bd) \leftrightarrow ac \equiv bd(mod\,n) \square
-        \\(iii)
-        \\& a\equiv b(mod\,n)에\,대해\,(ii)를\,활용해서\,증명\,가능함.
-        \end{align*}
-        ```
-        
+- 증명
+$$
+\begin{align*}
+(i, +증명)
+&a\equiv b(mod\,n) \leftrightarrow n|(a-b).
+\,(a-b)=nk_1이\,되는\,k_1 \in \Z가\, 존재
+\\&c \equiv d(mod\,n) \leftrightarrow n|(c-d).\,(c-d)=nk_2가\,되는\,k_2\in \Z가\, 존재
+\\&(a-b)+(c-d)=nk_1+nk_2=n(k_1+k_2)
+\\&(a+c)-(b+d)=n(k_1+k_2)
+\\&n|((a+c)-(b+d)) \leftrightarrow(a+c) \equiv (b+d)(mod\,n)\square
+\\&(-도\,마찬가지로\,증명\,가능)
+\\(ii)\\&\exist k_1,k_2\in \Z s.t.,\,a-b=nk_1, c-d=nk_2.
+\\&a=nk_1+b, c=nk_2+d
+\\&ac=(nk_1+b)(nk_2+d) = (nk_1nk_2+nk_1d+nk_2b+bd)
+\\&=n(nk_1nk_2+k_1d+k2_b)+bd
+\\&ac-bd=n(nk_1nk_2+k_1d+k2_b)
+\\&n|(ac-bd) \leftrightarrow ac \equiv bd(mod\,n) \square
+\\(iii)
+\\& a\equiv b(mod\,n)에\,대해\,(ii)를\,활용해서\,증명\,가능함.
+\end{align*}
+$$
+
 - Theorem 1.5.
     
     자연수 n과 m이 주어졌을 때, m을 n으로 나눈 몫과 나머지는 유일하게 존재한다. (정수에까지 확장 가능함.)
