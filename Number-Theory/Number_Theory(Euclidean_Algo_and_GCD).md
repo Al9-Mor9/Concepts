@@ -83,7 +83,7 @@ $$
 \displaylines{
 (i) a \equiv a(\bmod n)\leftrightarrow\ n|(a-a),\ n|0.\\
 모든\ 정수\ n이\ 0을\ 나누므로\ 이는\ 성립함 \square\\
-ii)
+(ii)
 a\equiv b(\bmod n) \leftrightarrow\ n|(a-b)이므로\\
 (a-b)=nk가\ 되는\ 어떤\ 정수\ k가\ 존재.\\
 양변에\ -1을\ 곱하면\ (b-a)=-nk=(-k)n이\ 되고,\\
