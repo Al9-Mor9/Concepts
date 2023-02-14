@@ -21,6 +21,13 @@
     - 엣지의 수는 노드의 수에서 1을 뺀 것과 같다
 - 종류
     - 정 이진트리(Full Binary Tree)
+        - 모든 노드가 0개, 혹은 2개의 자식노드를 가지는 트리.   
+        ![image](https://user-images.githubusercontent.com/74289372/218609676-0d0809a2-7b74-40cd-9742-4ca193280927.png)
+
+
+
+
+    - 포화 이진트리(Perfect Binary Tree)
         - 모든 레벨에서 노드들이 꽉 채워진(잎새노드를 제외한 모든 노드가 2개의 자식노드를 가짐) 트리
         
         ![Untitled 1](https://user-images.githubusercontent.com/90077061/216817131-7a1b5452-38f2-46b9-9136-d0ab2cc47ca1.png)
