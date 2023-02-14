@@ -43,7 +43,7 @@
     ![Untitled 3](https://user-images.githubusercontent.com/90077061/216817144-8a767e99-3e82-419a-97ec-7ec7174cd874.png)
     
     ```python
-    left_index = index * 2 + 1
+    left_index = index * 2
     right_index = index * 2 + 1
     ```
     
