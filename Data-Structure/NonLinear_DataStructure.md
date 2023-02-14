@@ -22,7 +22,7 @@
 - 종류
     - 정 이진트리(Full Binary Tree)
         - 모든 노드가 0개, 혹은 2개의 자식노드를 가지는 트리.   
-        ![image](https://user-images.githubusercontent.com/74289372/218609676-0d0809a2-7b74-40cd-9742-4ca193280927.png)
+       ![image](https://user-images.githubusercontent.com/74289372/218610388-472968f4-fbd0-48e1-b1f0-aeabbff878e3.png)
 
 
 
