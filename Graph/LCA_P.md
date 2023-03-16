@@ -86,11 +86,11 @@ int findLSA(int u, int v){
 
 ```cpp
 if (depth[a] < depth[b]) swap(a, b);
-		int diff = depth[a] - depth[b];                     // 두 노드의 깊이 차이
+	int diff = depth[a] - depth[b];				// 두 노드의 깊이 차이
 
-		for (int i = 0; i < MAX_DEPTH; i++){
-				if (diff & (1 << i)) a = parent[a][i];          // 깊이 차이만큼 올려주기
-		}
+	for (int i = 0; i < MAX_DEPTH; i++){
+		if (diff & (1 << i)) a = parent[a][i];		// 깊이 차이만큼 올려주기
+	}
 }
 ```
 
@@ -114,14 +114,14 @@ if (depth[a] < depth[b]) swap(a, b);
 
 ```cpp
 if (a != b) {
-			for (int j = MAX_DEPTH - 1; j >= 0; j--) {              // 조상들을 보면서
-				if (parent[a][j] && parent[a][j] != parent[b][j]) {   // 2^j 조상이 있고, 그것들이 서로 다른 경우
-					a = parent[a][j];                                   // 두 노드는 2^j만큼 위로 올려줘도 좋다.
-          b = parent[b][j];                                   
-				}
-			}
-			a = parent[a][0];                                       // 이 두 노드가 LCA의 정확히 아래에 위치하므로 그 부모를 찾으면 그 노드가 바로 LCA이다.
+	for (int j = MAX_DEPTH - 1; j >= 0; j--) {			// 조상들을 보면서
+		if (parent[a][j] && parent[a][j] != parent[b][j]) {	// 2^j 조상이 있고, 그것들이 서로 다른 경우
+			a = parent[a][j];				// 두 노드는 2^j만큼 위로 올려줘도 좋다.
+          		b = parent[b][j];                                   
 		}
+	}
+	a = parent[a][0];						// 이 두 노드가 LCA의 정확히 아래에 위치하므로 그 부모를 찾으면 그 노드가 바로 LCA이다.
+}
 ```
 
 ## LCA 알고리즘 (3) Euler Tour Technique
