@@ -1,0 +1,6 @@
+|  | 순서 | 중복 |  수식  |
+| ----- | ---- | ---- | ---- | 
+| 순열     | O | X | $_{n}\mathrm{P}_{r} = {n! \over (n-r)!}$ |
+| 중복순열  | O | O | $_{n}\mathrm{\Pi}_{r} = n^r$|
+| 조합     | X | X | $_{n}\mathrm{C}_{r} (= { _{n}\mathrm{P}_{r} \over r!})$|
+| 중복조합  | X | O | $_{n}\mathrm{H}_{r} = \ _{r + n - 1}\mathrm{C}_{r} = \\ _{n - 1 + r}\mathrm{C}_{n - 1}$|

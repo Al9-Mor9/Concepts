@@ -2,12 +2,8 @@
 ---
 ## Intro
 
-|  | 순서 | 중복 |  수식  |
-| ----- | ---- | ---- | ---- | 
-| 순열     | O | X | $_{n}\mathrm{P}_{r} = {n! \over (n-r)!}$ |
-| 중복순열  | O | O | $_{n}\mathrm{\Pi}_{r} = n^r$|
-| 조합     | X | X | $_{n}\mathrm{C}_{r} (= { _{n}\mathrm{P}_{r} \over r!})$|
-| 중복조합  | X | O | $_{n}\mathrm{H}_{r} = \ _{r + n - 1}\mathrm{C}_{r} = \\ _{n - 1 + r}\mathrm{C}_{n - 1}$|
+![](./cp1.png)
+
 
 ```python
 n = 3
@@ -28,14 +24,12 @@ combination_repetition = [1, 1], [1, 2], [1 ,3], [2, 2], [2, 3], [3 ,3]
     n개의 원소에서 r개를 순서에 상관있게 뽑는 경우의 수는 다음과 같다.
 
 $$
-
 \begin{align}
 
 nPr & = {n! \over (n - r)!} \\
 & = n(n-1)...(n-r+1)
     
 \end{align}
-
 $$
 
 우리의 주 관심사는 알고리즘 문제에서 탐색해야하는 Case, 즉 순열군을 구하는데 있다. Brute Froce와 밀접하며, 그렇기 때문에 Pruning을 염두해 두어야한다. 
@@ -56,6 +50,7 @@ $$
     3. 3번째 자리와 바꿀 놈(index 3)
     
     첫 번째 방법내 for 문에서 choose[i] = 1인 곳도 확인을 하기 때문에 loss가 발생한다. 따라서 남은 후보 집합을 따로 관리하거나 두 번째 방법을 사용하면 시간을 줄일 수 있다.
+
 $n^2$ -> $n(n-1) \over 2$
 
 
@@ -136,16 +131,12 @@ for p in perm_repetition(r):
     n개의 원소에서 r개를 순서에 상관없이 뽑는 경우의 수는 다음과 같다.
 
 $$
-
 \begin{align}
 
-\binom{n}{r} = 
-
-nCr & = {n! \over r!(n - r)!} \\
+\binom{n}{r} = nCr & = {n! \over r!(n - r)!} \\
 & = {nPr \over r!}
     
 \end{align}
-
 $$
 
 조합 역시 내장 패키지 itertools를 사용할 수 있으나, pruning을 염두해 두어 직접구현을 권장한다.
