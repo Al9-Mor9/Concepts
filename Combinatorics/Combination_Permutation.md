@@ -2,7 +2,7 @@
 ---
 ## Intro
 
-![](./cp1.png)
+![](./cp1.PNG)
 
 
 ```python
