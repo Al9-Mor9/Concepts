@@ -158,6 +158,15 @@ n, r = 3, 2
 arr = [1, 2, 3]
 ans = [0] * r
 
+def nCr(c, r, s):
+    if r == 0:
+        print(ans)
+    else:
+        for i in range(s, n - r + 1):
+            ans[r-1] = arr[i]
+            nCr(n, r-1, i+1)
+
+
 def combination1(idx, cur):
     if cur == n and idx != r: return # 돌았는데 다 선택 못한 경우.
 
@@ -179,8 +188,10 @@ def combination2(arr, r):
             l.append([arr[i]] + p)
     return l
 
+nCr(n, r, 0)
 combination1(0, 0)
 print(combination2(arr, r))
+
 ```
 
 ---
