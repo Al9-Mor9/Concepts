@@ -6,8 +6,8 @@
 
 
 ```python
-n = 3
-r = 2
+n = 3 # [1, 2, 3]
+r = 2 # 2개를 뽑는 다면,
 
 permutation = [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]
 permutation_repetition = [1, 1], [1, 2], [1, 3], [2, 1], [2, 2], [2, 3], [3, 1], [3, 2], [3, 3]
@@ -44,7 +44,7 @@ permutation1은,
 2. 나머지 2개 중에 1개를 뽑고,
 3. 마지막 1개를 고르면 된다.
 
-permutation는, 한 자리씩 선택을 하는데 후보군을 줄여 나간다.
+permutation2는, 한 자리씩 선택을 하는데 후보군을 줄여 나간다.
 1. 1번째 자리에 넣을놈 (본인 포함 index 1 ~ 3중 선택) 선택 후 교환.
 2. 2번째 자리와 바꿀 놈(index 2 ~ 3)
 3. 3번째 자리와 바꿀 놈(index 3)
@@ -87,7 +87,8 @@ permutation2(0)
 ---
 ## Permutation(with repitation)
 
-원소 관점에서 벗어나 담는 상자 (리스트의 동간)입장에서 보면 중복 순열을 이해할 수 있다.
+중복 순열을 문제로 만나면 조금 헷갈릴 수 있는데, 
+원소 관점에서 벗어나 담는 상자(리스트의 공간) 입장에서 보면 중복 순열을 이해할 수 있다.
 
 - 서로 다른 편지 4통을 서로 다른 2개의 우체통에 넣기
 - 5명의 여행자가 3곳의 호텔에 투숙하는 방법.
@@ -101,6 +102,7 @@ $$
 
 중복 순열의 경우 permutation1에서 choose를 기억할 필요가 없다.
 위 첫번 째 수식에서 choose 부분만 제외 시키면 구현된다.(if 검증부도 제거)
+함수 는 r번 호출되고 for문이 n번 돌으므로 n^r과 같은 시간복잡도임을 확인 할 수 있다.
 
 yield를 사용하면 간편하게 구현할 수 있다.
 
@@ -108,7 +110,18 @@ yield를 사용하면 간편하게 구현할 수 있다.
 n, r = 3, 2
 arr = [1, 2, 3]
 
-def perm_repetition(r):
+
+def perm_repetition1(idx):
+    if idx == r:
+        print(ans)
+    else:
+        for i in range(n):
+            ans[idx] = arr[i]
+            permutation1(idx + 1)
+            ans[idx] = 0
+
+
+def perm_repetition2(r):
     for i in range(n):
         if r == 1:
             yield arr[i]
@@ -141,30 +154,20 @@ $$
 
 조합 역시 내장 패키지 itertools를 사용할 수 있으나, pruning을 염두해 두어 직접구현을 권장한다.
 
+조합은 다양한 방법으로 구현이 가능한데, 순서를 신경 쓰지 않아도 되기 때문에 각 요소를 선택할지 판단만 하면 된다.
 
-조합 역시 다양한 방법으로 구현이 가능한데, 순서를 신경 쓰지 않아도 되기 때문에 각 요소를 선택할지 판단만 하면 된다.
-
-cur 변수는 n 범위 내에서 순회하며, idx 변수는 조합에 포함시킬 변수를 의미한다.
-
+combination1 에서, cur 변수는 n 범위 내에서 순회하며, idx 변수는 조합에 포함시킬 변수를 의미한다.
 arr의 각 원소를 선택할지 말지 판단하며, 선택한 조합내 원소의 개수가 r개를 만족시키면 반환한다.
 
 combination2는 itertools 패키지의 방식을 재구성해본 건데, 조합이라는게 분할 정복 방식으로 생각이 가능하다. 원소 하나를 골랐다면, 나머지 원소들 중 고를 놈을 골라나가는 방식. 
-
 보다 컴팩트하게 구현됬지만 가지치기가 까다로워 보인다. 
 
+nCr은 수업시간에 소개된 방식이다. combination2와 동일한 방식이다.
 
 ```python
 n, r = 3, 2
 arr = [1, 2, 3]
 ans = [0] * r
-
-def nCr(c, r, s):
-    if r == 0:
-        print(ans)
-    else:
-        for i in range(s, n - r + 1):
-            ans[r-1] = arr[i]
-            nCr(n, r-1, i+1)
 
 
 def combination1(idx, cur):
@@ -188,9 +191,19 @@ def combination2(arr, r):
             l.append([arr[i]] + p)
     return l
 
-nCr(n, r, 0)
+
+def nCr(c, r, s):
+    if r == 0:
+        print(ans)
+    else:
+        for i in range(s, n - r + 1):
+            ans[r-1] = arr[i]
+            nCr(n, r - 1, i + 1)
+
 combination1(0, 0)
 print(combination2(arr, r))
+nCr(n, r, 0)
+
 
 ```
 
