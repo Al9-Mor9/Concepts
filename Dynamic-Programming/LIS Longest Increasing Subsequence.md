@@ -30,7 +30,7 @@ array[4]는 array[1]과 array[2]에 비해 큰 값. dp[1]과 dp[2]는 값이 1�
 
 ![Untitled](LIS/Untitled%205.png)
 
-마지막 array[5]는 array[1], array[2], array[3], array[4]에 비해 큰 값, dp[3]과 dp[4] 중 최댓값이 2로 dp[5]에는 2 + 1인 3
+마지막 array[5]는 array[1], array[2], array[3], array[4]에 비해 큰 값, dp[3]과 dp[4]가 2로 가장 큰 값이므로 dp[5]에는 2 + 1인 3
 
 ```python
 array = [5, 2, 1, 4, 3, 5]
@@ -79,6 +79,8 @@ array[4]의 값인 3은 x 배열에서 1번째 인덱스에 들어갈 수 있으
 
 array[5]의 값인 5를 x 배열의 몇 번째에 넣을 수 있는지를 이분탐색을 통해 찾는다. x 배열의 마지막 값인 3보다 크므로 x 배열에 새롭게 5를 추가해 주고 dp 배열에는 dp 배열의 마지막 값에 + 1을 해주어 3을 추가 → 증가 부분 수열의 길이가 3인 수열 중 끝이 5인 수열이 있다는 것을 의미
 
+![Untitled](LIS/Untitled%2011.png)
+
 이렇게 array의 마지막까지 탐색을 끝내고 나면 위와같이 dp 배열과 x 배열이 완성, LIS의 길이는 3
 
 x 배열은 항상 오름차순으로 정렬되어 있기 때문에 array의 값이 x 배열의 어느 위치에 들어갈 수 있는지를 이분 탐색을 활용하여 찾을 수 있으며, Python에서 bisect를 사용하여 쉽게 구현 가능함
@@ -117,9 +119,9 @@ for i in range(1, len(array)):
 3. LIS Result를 오름차순으로 정렬한다.
 4. 실제 LIS가 완성된다.
 
-![Untitled](LIS/Untitled%2011.png)
-
 ![Untitled](LIS/Untitled%2012.png)
+
+![Untitled](LIS/Untitled%2013.png)
 
 ```python
 # 전깃줄 - 2 https://www.acmicpc.net/problem/2568
