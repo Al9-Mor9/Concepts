@@ -54,9 +54,9 @@ graph = [[] for _ in range(v + 1)]
 queue = deque()
 
 for i in range(e):
-    s, e = map(int, input().split())
-    graph[s].append(e)
-    in_degree[e] += 1   # 진입 차수를 저장하자.
+    a, b = map(int, input().split())
+    graph[a].append(b)
+    in_degree[b] += 1   # 진입 차수를 저장하자.
 
 for i in range(1, v + 1):
     if in_degree[i] == 0:
