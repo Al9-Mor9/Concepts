@@ -64,7 +64,7 @@ for i in range(1, v + 1):
 
 while queue:
     cur = queue.popleft()
-    ans.append(v)
+    ans.append(cur)
 
     for node in graph[cur]:
         in_degree[node] -= 1    # 정렬된 노드에 대한 정보를 지운다.
