@@ -1,9 +1,9 @@
 # Concepts
 
 ## 1. Algorithm Basics
-### (1) Brute Force
-### (2) Recursive Function (Fibonacci)
-### (3) BFS & DFS
+### Brute Force
+### Recursive Function (Fibonacci)
+### BFS & DFS
 - Backtracking
   
 ### Search
